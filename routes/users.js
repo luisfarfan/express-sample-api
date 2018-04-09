@@ -46,7 +46,6 @@ router.get('/by-dni/:dniConductor', function (req, res, next) {
     const conductor = obtenerConductorByDni(req.params.dniConductor);
     if (conductor) res.send({name: conductor.name, dni:conductor.dni, sexo: conductor.sexo})
     else res.status(404).send('Not found');
-    res.send();
 });
 
 module.exports = router;
